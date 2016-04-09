@@ -1,0 +1,56 @@
+<h1>Menu Transaksi</h1>
+
+<%= form_for [:mod, @transaksi] do |f| %>
+	<p>
+		<%= f.label :Nomor_Transaksi %><br>
+		<%= f.text_field :id %>
+	</p>
+
+	<p>
+		<%= f.label :mobil_id %><br>
+		<%= f.select :mobil_id %>
+	</p>
+
+	<p>
+		<%= f.label :pelanggan_id %><br>
+		<%= f.text_field :pelanggan_id %>
+	</p>
+
+	<p>
+		<%= f.label :tanggal_sewa %><br>
+		<%= f.text_field :tanggal_sewa %>
+	</p>
+
+	<p>
+		<%= f.label :tanggal_kembali %><br>
+		<%= f.text_field :tanggal_kembali %>
+	</p>
+
+	<p>
+		<%= f.label :lama_sewa %><br>
+		<%= f.text_field :lama_sewa %>
+	</p>
+
+	<p>
+		<%= f.label :total_bayar %><br>
+		<%= f.text_field :total_bayar %>
+	</p>
+
+	<p>
+		<%= f.label :uang_muka %><br>
+		<%= f.text_field :uang_muka %>
+	</p>
+
+	<p>
+		<%= f.label :sisa_bayar %><br>
+		<%= f.text_field :sisa_bayar %>
+	</p>
+
+	<p>
+		<%= f.label :keterangan %><br>
+		<%= f.text_field :keterangan %>
+	</p>
+
+
+	<p><%= f.submit %></p>
+<% end %>

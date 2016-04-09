@@ -1,0 +1,7 @@
+I"o(function() {
+  jQuery(function() {
+    return $('#mod_published_on').datepicker();
+  });
+
+}).call(this);
+:ET

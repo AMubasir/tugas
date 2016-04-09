@@ -1,0 +1,22 @@
+<h1>Admin Index</h1>
+
+<table class="table-bordered table-hover">
+	<thead>
+		<tr>
+			<th>Nama Lengkap</th>
+			<th>Username</th>
+			<th>Opsi</th>
+		</tr>
+	</thead>	
+	<tbody>
+		<% @admins.each do |admin| %>
+		<tr>
+			<td><%= admin.nama_lengkap %></td>
+			<td><%= admin.username %></td>
+			<td>
+				<%= link_to 'Edit', edit_mod_admin_path(admin) %>
+			</td>
+		</tr>
+		<% end %>	
+	</tbody>
+</table>

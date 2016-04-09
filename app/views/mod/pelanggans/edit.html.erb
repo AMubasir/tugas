@@ -1,0 +1,27 @@
+<h1>Edit Data Pelanggan</h1>
+
+<%= render 'validation_errors', object: @pelanggan %>
+
+<%= form_for [:mod, @pelanggan] do |f| %>
+	<p>
+		<%= f.label :nama %><br>
+		<%= f.text_field :nama %>
+	</p>
+
+	<p>
+		<%= f.label :alamat %><br>
+		<%= f.text_field :alamat %>
+	</p>
+
+	<p>
+		<%= f.label :jenis_kelamin %><br>
+		<%= f.text_field :jenis_kelamin %>
+	</p>
+
+	<p>
+		<%= f.label :no_telp %><br>
+		<%= f.text_field :no_telp %>
+	</p>
+
+	<p><%= f.submit %></p>
+<% end %>

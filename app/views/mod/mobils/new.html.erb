@@ -1,0 +1,32 @@
+<h1>Tambah Data Mobil</h1>
+
+<p><%= render 'validation_errors', object: @mobil %></p>
+
+<%= form_for [:mod, @mobil] do |f| %>
+	<p>
+		<%= f.label :nama %><br>
+		<%= f.text_field :nama %>
+	</p>
+
+	<p>
+		<%= f.label :merk %><br>
+		<%= f.text_field :merk %>
+	</p>
+
+	<p>
+		<%= f.label :warna %><br>
+		<%= f.text_field :warna %>
+	</p>
+
+	<p>
+		<%= f.label :harga %><br>
+		<%= f.text_field :harga %>
+	</p>
+
+	<p>
+		<%= f.label :keterangan %><br>
+		<%= f.check_box :keterangan %>
+	</p>
+
+	<p><%= f.submit %></p>
+<% end %>

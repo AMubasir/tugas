@@ -1,0 +1,41 @@
+<h1>Data Mobil</h1>
+
+<p><%= link_to 'Tambah Data', new_mod_mobil_path %></p>
+
+<p>
+	<%= form_tag(mod_mobils_path, method: :get) do %>
+		<%= text_field_tag :search %>
+		<%= submit_tag 'Search' %>
+	<% end %>
+</p>
+
+<table>
+	<thead>
+		<tr>
+			<th>Nama</th>
+			<th>Merk</th>
+			<th>Warna</th>
+			<th>Harga</th>
+			<th>Keterangan</th>
+			<th>Opsi</th>
+		</tr>
+	</thead>
+	<tbody>
+
+		<% @mobils.each do |mobil| %>
+		<tr>
+			<td><%= mobil.nama %></td>
+			<td><%= mobil.merk %></td>
+			<td><%= mobil.warna %></td>
+			<td><%= mobil.harga %></td>
+			<td><%= status_converter(mobil.keterangan, truthy: 'Ada', falsey: 'Disewa') %></td>
+			<td>
+				<%= link_to 'Edit', edit_mod_mobil_path(mobil) %> |
+				<%= link_to 'Show', mod_mobil_path(mobil) %> |
+				<%= link_to 'Delete', mod_mobil_path(mobil), method: :delete, data: {confirm: 'Anda yakin ingin menghapus ini ?'} %>
+			</td>
+		</tr>
+		<% end %>
+	</tbody>
+</table>
+<p><%= paginate @mobils %></p>

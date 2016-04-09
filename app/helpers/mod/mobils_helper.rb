@@ -1,0 +1,2 @@
+module Mod::MobilsHelper
+end

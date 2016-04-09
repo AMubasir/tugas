@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tugas</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<% if flash[:notice] %>
+	<div class="notice"><%= flash[:notice] %></div>
+<% end %>
+
+<% if flash[:alert] %>
+	<div class="alert"><%= flash[:alert] %></div>
+<% end %>
+
+<%= link_to 'Log out', logout_path %>
+
+<p>
+	<%= link_to 'Admin', mod_admins_path %>
+	<%= link_to 'Mobil', mod_mobils_path %>
+	<%= link_to 'Pelanggan', mod_pelanggans_path %>
+	<%= link_to 'Transaksi', mod_transaksis_path %>
+	<%= link_to 'Pengembalian', mod_pengembalians_path %>
+</p>
+
+<%= yield %>
+
+</body>
+</html>

@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nama: MyString
+  alamat: MyString
+  jenis_kelamin: false
+  no_telp: 1
+
+two:
+  nama: MyString
+  alamat: MyString
+  jenis_kelamin: false
+  no_telp: 1
